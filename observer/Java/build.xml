@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<project name="Test" default="test">
+   <target name="test">
+       <echo>First build in Ant!</echo>
+   </target>
+</project>

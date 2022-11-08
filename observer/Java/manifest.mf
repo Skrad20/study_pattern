@@ -1,0 +1,2 @@
+main-class: src.WeatherStation
+class-path: bin/
