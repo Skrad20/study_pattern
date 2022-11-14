@@ -1,11 +1,13 @@
+import Pizzes.Pizza;
+
+package Stores;
+
 public abstract class PizzaStore {
     public Pizza orderPizza(String type){
         
         Pizza pizza;
         pizza = createPizza(type);
-        System.out.println(1);
         pizza.prepare();
-        System.out.println(2);
         pizza.bake();
         pizza.cut();
         pizza.box();

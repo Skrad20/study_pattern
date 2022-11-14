@@ -1,3 +1,7 @@
+import Pizzes.NYStyleCheesePizza;
+import Pizzes.Pizza;
+
+package Stores;
 public class NYStylePizzaStore extends PizzaStore {
     public Pizza createPizza(String type){
         Pizza pizza = null;
