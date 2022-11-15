@@ -1,6 +1,7 @@
-import Pizzes.Pizza;
 
 package Stores;
+
+import Pizzes.Pizza;
 
 public abstract class PizzaStore {
     public Pizza orderPizza(String type){

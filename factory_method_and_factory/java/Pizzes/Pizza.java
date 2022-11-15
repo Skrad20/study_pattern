@@ -1,35 +1,47 @@
 package Pizzes;
 import java.util.ArrayList;
 
+import Ingredients.Dough;
+import Ingredients.Sauce;
+import Ingredients.Sheese;
+import Ingredients.Pepperoni;
+import Ingredients.Veggies;
+import Ingredients.Clams;
+
 public abstract class Pizza {
     String name;
-    String dough;
-    String sauce;
-    ArrayList<String> toppings = new ArrayList<String>();
-    
-    void prepare(){
-        System.out.println("Preparing " + name);
-        System.out.println("Tossing dough " + dough);
-        System.out.println("Adding sauce " + sauce);
-        System.out.println("Adding toppings");
-        for (String topping : toppings){
-            System.out.println(" " + topping);
-        }
-    }
+    String description;
+    Dough dough;
+    Sauce sauce;
+    Veggies veggies[];
+    Sheese cheese;
+    Pepperoni pepperoni;
+    Clams clam;
+        
+    public abstract void prepare();
 
-    void bake(){
+    public void bake(){
         System.out.println("Bake 25 mimutes at 350 ");
     }
 
-    void cut(){
+    public void cut(){
         System.out.println("Cuttingthe pizza into diagonal slices");
     }
 
-    void box(){
+    public void box(){
         System.out.println("Please pizza in official PizzaStore box");
     }
 
     public String getName(){
         return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public String toString() {
+        // Код вывода описания пиццы
+        return this.description;
     }
 }

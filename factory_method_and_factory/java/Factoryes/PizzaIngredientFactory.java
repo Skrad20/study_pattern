@@ -7,7 +7,7 @@ import Ingredients.Pepperoni;
 import Ingredients.Veggies;
 import Ingredients.Clams;
 
-
+// Абстрактная фабрика
 public interface PizzaIngredientFactory {
     public Dough createDought();
     public Sauce createSauce();

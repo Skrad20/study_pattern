@@ -1,16 +1,25 @@
-import Pizzes.NYStyleCheesePizza;
+package Stores;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import Factoryes.NYPizzaIngredientFactory;
+import Factoryes.PizzaIngredientFactory;
+import Pizzes.CheesePizza;
 import Pizzes.Pizza;
 
-package Stores;
+
 public class NYStylePizzaStore extends PizzaStore {
+    Map <String, Pizza> pizzesType = new HashMap<String, Pizza>();
+    // Фабричный метод
     public Pizza createPizza(String type){
-        Pizza pizza = null;
-        if (type.equals("cheese")){
-            pizza = new NYStyleCheesePizza();
-        } else {
-            pizza = null;
-        }
+        PizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory();
+        pizzesType.put("cheese", new CheesePizza(ingredientFactory));
+
+        Pizza pizza =  pizzesType.get(type);
+        pizza.setName("Cheese");
         return pizza;
+
     }
     
 }
